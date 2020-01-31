@@ -1,0 +1,21 @@
+
+body{
+    background-color:  #eee; 
+    width: 700px;
+    float: center;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+/*Container Background */
+.contbgrd{
+    background-color: #fff;
+}
+/* Ruler Styling */
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+}
+ /* Middle Box Border Style */
+.borderstyle{
+    border: 1px dashed #8c8b8b;
+}
