@@ -17,46 +17,47 @@
   </head>
 
   <body>
+
+    
+
+    <!-- Start to design interface -->
     <header>
-        <h1 class="text-center">Password Generator</h1> 
+        <h1 class="text-center py-3">Password Generator</h1> 
+
     </header>
     <!-- Interface Design -->
     <div class="container contbgrd">
         <div class="row">  
-            <div class="col">
-                <h4 class="font-weight-bold">Generate a Password</h4>
+            <!-- col ppties to ensure responsiveness??-->
+            <div class="col py-2 px-auto mx-2 my-2"> 
+                <h4 class="font-weight-bold text-center">Generate a Password</h4>
+                <br>
                 <hr class="style1">
             </div>
             
         </div>
         <div class="row">
-            <div class="col borderstyle mx-2">
-                <!-- output text area box- writes secPass-->
+            <div class="col borderstyle py-2 px-auto mx-2 my-2">
                 <p class="text-center font-weight-light"> Your Secured Password</p>
+                <br> <br>
+                <!-- output text area box- writes secPass - call JS id secPassDisplay-->
+                <p id="secPassDisplay"> </p>
+                
             </div>
         </div>
         <div class="row">
-            <div class="col mx-auto">
+            <div class="col py-2 px-auto mx-2 my-2">
                 <hr class="style1">
-                <!-- Button to run the JavaScript program - return secPass-->
-                <button>
-                    <button type="submit" class="btn btn-danger btn-lg rounded-pill" value="secPass">Generate Password</button>
-                </button>
+                <!-- Button to launch the JavaScript program - secPassWord-->
+                <!-- how to center a button - here css #buttonc -- Bootstrap??? -->
+               <button type="button" class="btn btn-danger btn-lg rounded-pill" id="butGen" onclick="secPassWord()">Generate Password</button>
+                
             </div>
         </div>
     </div>
-    
-
-
-    <!-- Script for code generator -->
-
-    <script>
-
-    
-    
-    
-    
-    </script>
+        
+    <!-- Point to Javascript file -->
+    <script src="./Assets/Javascript/myscript.js"></script> 
 
     <!-- Optional JavaScript for Bootstrap-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

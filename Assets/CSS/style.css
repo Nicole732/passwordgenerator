@@ -1,5 +1,5 @@
 
-body{
+body {
     background-color:  #eee; 
     width: 700px;
     float: center;
@@ -12,10 +12,15 @@ body{
     background-color: #fff;
 }
 /* Ruler Styling */
-hr.style1{
+hr.style1 {
 	border-top: 1px solid #8c8b8b;
 }
  /* Middle Box Border Style */
-.borderstyle{
+.borderstyle {
     border: 1px dashed #8c8b8b;
+}
+
+/* to center button???*/
+#butGen {
+    margin: auto;
 }
