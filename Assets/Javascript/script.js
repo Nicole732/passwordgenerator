@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Demo of Function generatePassword</title>
-</head>
-<body>
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
   
+    passwordText.value = password;
+  
+  }
+  
+  // Add event listener to generate button
 
-    <script>
+generateBtn.addEventListener("click", writePassword);
 
-    // var secPassLength = parseInt(prompt("Input Password length. It should be a number between 8 and 128"));
-    // console.log("Your password length  is: " + secPassLength);
-
+// Start the process to generate password with function generatePassword 
+// check if users entry is valid
+// ask user for each character option
+//pull entries from character arrays based on users selction
+// pushes  it bases on user's selected criteria, concatenated entries
+// stores in options array 
+//makes a random selection in temporal option array and pushes to final password
 
 function generatePassword(){
 
@@ -46,7 +54,7 @@ function generatePassword(){
             // consider the negative cases
             // no choices
             if (!genLowerCase && !genUpperCase && !genSpecialChar && !genNumber){
-                    options = alert ("Please make a choice!");
+                    options = alert ("Please make a choice! Start All over.");
                     
             } 
             //all choices. concatenates entries of corresponding arrays
@@ -126,11 +134,7 @@ function generatePassword(){
                password.push(getOptions);
             }
             
-            // var password= "";
-            // for ( var i=0; i < secPassLength; i++){
-            //     var getOptions = options[Math.floor(Math.random() * options.length)];
-            //     password = password + getOptions;
-            // }
+            // join creates and returns the concatenate password
 
             password = password.join("");
             return password;
@@ -149,24 +153,24 @@ function generatePassword(){
 
 };
 console.log(generatePassword());
+
+//Event listener for the "generate password" button with id generate
+document.querySelector("#generate").addEventListener("click", function (e) {
+    e.preventDefault();
+    var GeneratedPassword = generatePassword();
+    document.getElementById("password").placeholder = GeneratedPassword;
+});
+
+
+
+  
+
+
     
 
 
 
-</script>
 
 
 
 
-
-        
-     <!-- Point to Javascript file
-    // <script src="./Assets/Javascript/myscript.js"></script>  -->
-
-    <!-- Optional JavaScript for Bootstrap-->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
