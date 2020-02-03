@@ -1,17 +1,3 @@
-//Handles interaction with HTML document
-// Start the process with click on button with id generate
-
-//DOM
-var generateBtn = document.querySelector("#generate");
-
-
-generateBtn.addEventListener("click", function(e){
-    e.preventDefault();
-    generatePassword();
-    // var GeneratedPassword = generatePassword();
-    // document.getElementById("password").placeholder =  GeneratedPassword;
-   
-});
 
 // Assignment Code
 
@@ -21,10 +7,12 @@ generateBtn.addEventListener("click", function(e){
 var generateBtn = document.querySelector("#generate");
 
 //generateBtn.addEventListener("click", generatePassword());
+//var preventlink =
 
 
 // Write password to the #password input
 function writePassword() {
+   // generateBtn.preventDefault();
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
   
@@ -32,8 +20,8 @@ function writePassword() {
   
   };
 
-
- generateBtn.addEventListener("click", writePassword);
+  generateBtn.addEventListener("click", writePassword);
+ 
 
 
 
@@ -82,6 +70,7 @@ function generatePassword(){
             // no choices
             if (!genLowerCase && !genUpperCase && !genSpecialChar && !genNumber){
                     options = alert ("Please make a choice! Start All over.");
+                    //return
                     
             } 
             //all choices. concatenates entries of corresponding arrays
@@ -164,7 +153,9 @@ function generatePassword(){
             // join creates and returns the concatenate password
 
             var result = password.join("");
+
             return result;
+
         } else {
             console.log("wrong range")
             alert("Please enter a number in the correct range");
@@ -175,12 +166,29 @@ function generatePassword(){
         // no entry for secPassLenght;
         alert("The length is required")
         console.log("The length is required")
+        
         return;
     }
 
 };
 console.log(generatePassword());
-generatePassword();
+
+
+//Handles interaction with HTML document
+// Start the process with click on button with id generate
+
+//DOM
+// var generateBtn = document.querySelector("#generate");
+
+
+// generateBtn.addEventListener("click", function(e){
+//     e.preventDefault();
+//     //generatePassword();
+//     var GeneratedPassword = generatePassword();
+//     document.getElementById("password").placeholder =  GeneratedPassword;
+   
+// });
+
 
 
 
