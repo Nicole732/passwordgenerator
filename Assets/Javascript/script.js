@@ -1,5 +1,27 @@
-// Assignment Code
+//Handles interaction with HTML document
+// Start the process with click on button with id generate
+
+//DOM
 var generateBtn = document.querySelector("#generate");
+
+
+generateBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    generatePassword();
+    // var GeneratedPassword = generatePassword();
+    // document.getElementById("password").placeholder =  GeneratedPassword;
+   
+});
+
+// Assignment Code
+
+//Handles interaction with HTML document
+// Start the process with click on button with id generate
+
+var generateBtn = document.querySelector("#generate");
+
+//generateBtn.addEventListener("click", generatePassword());
+
 
 // Write password to the #password input
 function writePassword() {
@@ -8,11 +30,16 @@ function writePassword() {
   
     passwordText.value = password;
   
-  }
-  
-  // Add event listener to generate button
+  };
 
-generateBtn.addEventListener("click", writePassword);
+
+ generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
 
 // Start the process to generate password with function generatePassword 
 // check if users entry is valid
@@ -136,30 +163,30 @@ function generatePassword(){
             
             // join creates and returns the concatenate password
 
-            password = password.join("");
-            return password;
+            var result = password.join("");
+            return result;
         } else {
             console.log("wrong range")
             alert("Please enter a number in the correct range");
             console.log("The length is not within range");
-        };
+        }
         // end validation within rigth range
     } else {
         // no entry for secPassLenght;
         alert("The length is required")
         console.log("The length is required")
         return;
-    };
+    }
 
 };
 console.log(generatePassword());
+generatePassword();
 
-//Event listener for the "generate password" button with id generate
-document.querySelector("#generate").addEventListener("click", function (e) {
-    e.preventDefault();
-    var GeneratedPassword = generatePassword();
-    document.getElementById("password").placeholder = GeneratedPassword;
-});
+
+
+
+
+
 
 
 
