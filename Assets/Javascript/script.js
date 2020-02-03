@@ -6,9 +6,6 @@
 
 var generateBtn = document.querySelector("#generate");
 
-//generateBtn.addEventListener("click", generatePassword());
-//var preventlink =
-
 
 // Write password to the #password input
 function writePassword() {
@@ -22,12 +19,6 @@ function writePassword() {
 
   generateBtn.addEventListener("click", writePassword);
  
-
-
-
-
-
-
 
 // Start the process to generate password with function generatePassword 
 // check if users entry is valid
@@ -70,7 +61,7 @@ function generatePassword(){
             // no choices
             if (!genLowerCase && !genUpperCase && !genSpecialChar && !genNumber){
                     options = alert ("Please make a choice! Start All over.");
-                    //return
+                    return
                     
             } 
             //all choices. concatenates entries of corresponding arrays
@@ -171,7 +162,7 @@ function generatePassword(){
     }
 
 };
-console.log(generatePassword());
+//console.log(generatePassword());
 
 
 //Handles interaction with HTML document

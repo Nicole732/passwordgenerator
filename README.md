@@ -3,8 +3,6 @@
 It is an application that generates a random password based on user-selected criteria. It runs in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. The user activates a function to generate a password which is of the length of his choice and includes, as the user choose through a series of prompts, either a lower case or an upper case letter, a numeric number or a special character.
 The generated password is displayed on a text area in the user's interface.
 
-note: bug to correct. prompt as app is opened. need to click on button twice before the program is excecuted as shown below.
-
 
 The link to the deployed application is: 
 ![deployedsite](https://dorinetk.github.io/passwordgenerator/).
