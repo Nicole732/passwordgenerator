@@ -4,9 +4,9 @@ It is an application that generates a random password based on user-selected cri
 The generated password is displayed on a text area in the user's interface.
 
 
-The link to the deployed application is: 
-![deployedsite](https://dorinetk.github.io/passwordgenerator/).
-![repository](https://github.com/Dorinetk/passwordgenerator)
+The link to:
+Deployed Site: https://dorinetk.github.io/passwordgenerator/
+Repository: https://github.com/Dorinetk/passwordgenerator
 
 For each of the scenario below, click on the picture links to view the screenshots:
 
