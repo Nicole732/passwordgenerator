@@ -1,172 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Demo of Function generatePassword</title>
 </head>
+
 <body>
 
-  
+
 
     <script>
 
-    // var secPassLength = parseInt(prompt("Input Password length. It should be a number between 8 and 128"));
-    // console.log("Your password length  is: " + secPassLength);
+        // var secPassLength = parseInt(prompt("Input Password length. It should be a number between 8 and 128"));
+        // console.log("Your password length  is: " + secPassLength);
 
 
-function generatePassword(){
+        function generatePassword() {
 
-    var charactersN = ["0","1", "2", "3", "4", "5", "6","7", "8", "9"];
-    var charactersl = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; 
-    var charactersU= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    var charactersS = ["!", "#", "$", "%", "&", "'", "(", ")", ",", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=>", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~", ";"];
-    var genLowerCase;
-    var genUpperCase;
-    var genSpecialChar;
-    var options;
-    var password = [];
-    
-
-
-    //request user input on password length. use passeInt to return a number
-    
-    var secPassLength = parseInt(prompt("Input Password length. It should be a number between 8 and 128"));
-    console.log("Your password length  is: " + secPassLength);
-    // check various criteria
-    if (secPassLength) {
-        // secPasslength is valid
-        // if it is in the range
-        if (secPassLength >=8 && secPassLength <= 128){
-            genLowerCase = confirm("Do you want to include lower cases?");
-            genUpperCase= confirm("Do you want to include upper cases?");
-            genSpecialChar = confirm("Do you want to include special characters?");
-            genNumber =  confirm("Do you want to include numbers?");
-
-            console.log(genLowerCase, genUpperCase, genSpecialChar,genNumber );
-            // consider the negative cases
-            // no choices
-            if (!genLowerCase && !genUpperCase && !genSpecialChar && !genNumber){
-                    options = alert ("Please make a choice!");
-                    
-            } 
-            //all choices. concatenates entries of corresponding arrays
-            else if (genLowerCase && genUpperCase && genSpecialChar && genNumber){
-                
-                options = charactersl.concat(charactersl, charactersS, charactersN);
-            }
-            // if 3 options - no number
-            else if (genLowerCase && genUpperCase && genSpecialChar) {
-                
-                options = charactersl.concat(charactersU, charactersS);
-            }
-             // if 3 options - no special char
-            else if (genLowerCase && genUpperCase && genNumber) {
-                
-                options = charactersl.concat(chartersU, charactersN);
-
-            }
-            //if 3 options - no upper case
-            else if (genLowerCase && genSpecialChar && genNumber) {
-                
-                options = charactersl.concat(charactersS, charactersN);
-
-            }
-             //if 2 options - lower case and special character
-             else if (genLowerCase && genSpecialChar) {
-                
-                options = charactersl.concat(charactersS);
-
-            }
-            //if 2 options - lower and upper
-            else if (genLowerCase && genUpperCase){
-                
-                options = charactersl.concat(charactersU);
-
-            }
-            //if 2 options - lower and number
-            else if (genLowerCase && genNumber){
-                
-                options = charactersl.concat(charactersN);
-
-            }
-
-            //if 2 options  -lower and special
-            else if (genLowerCase && genSpecialChar) {
-                
-                options = charactersl.concat(charactersS);
-
-            }
-            // 1 option - lower
-            else if (genLowerCase) {
-
-                options = charactersl;
-            }
-             // 1 option - Upper
-             else if (genUpperCase) {
-
-            options = charactersU;
-            }
-             // 1 option - Special
-             else if (genSpecialChar) {
-
-            options = charactersS;
-            }
-            // 1 option - Number
-            else if (genNum){
-
-            options = charactersU;
-            };
-            // secPass array hold generated password
+            var charactersN = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            var charactersl = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+            var charactersU = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            var charactersS = ["!", "#", "$", "%", "&", "'", "(", ")", ",", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=>", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~", ";"];
+            var genLowerCase;
+            var genUpperCase;
+            var genSpecialChar;
+            var options;
             var password = [];
-            // //random selection of variables and pushes it in password
-            for ( var i=0; i < secPassLength; i++) {
 
-               var getOptions = options[Math.floor(Math.random() * options.length)];
+            //request user input on password length. use passeInt to return a number
 
-               password.push(getOptions);
-            }
-            
-            // var password= "";
-            // for ( var i=0; i < secPassLength; i++){
-            //     var getOptions = options[Math.floor(Math.random() * options.length)];
-            //     password = password + getOptions;
-            // }
+            var secPassLength = parseInt(prompt("Input Password length. It should be a number between 8 and 128"));
+            console.log("Your password length  is: " + secPassLength);
+            // check various criteria
+            if (secPassLength) {
+                // secPasslength is valid
+                // if it is in the range
+                if (secPassLength >= 8 && secPassLength <= 128) {
+                    genLowerCase = confirm("Do you want to include lower cases?");
+                    genUpperCase = confirm("Do you want to include upper cases?");
+                    genSpecialChar = confirm("Do you want to include special characters?");
+                    genNumber = confirm("Do you want to include numbers?");
 
-            var result = password.join("");
-            return result;
-        } else {
-            console.log("wrong range")
-            alert("Please enter a number in the correct range");
-            console.log("The length is not within range");
+                    console.log(genLowerCase, genUpperCase, genSpecialChar, genNumber);
+                    // consider the negative cases
+                    // no choices
+                    if (!genLowerCase && !genUpperCase && !genSpecialChar && !genNumber) {
+                        options = alert("Please make a choice!");
+
+                    }
+                    //all choices. concatenates entries of corresponding arrays
+                    else if (genLowerCase && genUpperCase && genSpecialChar && genNumber) {
+
+                        options = charactersl.concat(charactersl, charactersS, charactersN);
+                    }
+                    // if 3 options - no number
+                    else if (genLowerCase && genUpperCase && genSpecialChar) {
+
+                        options = charactersl.concat(charactersU, charactersS);
+                    }
+                    // if 3 options - no special char
+                    else if (genLowerCase && genUpperCase && genNumber) {
+
+                        options = charactersl.concat(chartersU, charactersN);
+
+                    }
+                    //if 3 options - no upper case
+                    else if (genLowerCase && genSpecialChar && genNumber) {
+
+                        options = charactersl.concat(charactersS, charactersN);
+
+                    }
+                    //if 2 options - lower case and special character
+                    else if (genLowerCase && genSpecialChar) {
+
+                        options = charactersl.concat(charactersS);
+
+                    }
+                    //if 2 options - lower and upper
+                    else if (genLowerCase && genUpperCase) {
+
+                        options = charactersl.concat(charactersU);
+                    }
+                    //if 2 options - lower and number
+                    else if (genLowerCase && genNumber) {
+                        
+                        options = charactersl.concat(charactersN);
+                    }
+                    //if 2 options  -lower and special
+                    else if (genLowerCase && genSpecialChar) {
+
+                        options = charactersl.concat(charactersS);
+                    }
+                    // 1 option - lower
+                    else if (genLowerCase) {
+
+                        options = charactersl;
+                    }
+                    // 1 option - Upper
+                    else if (genUpperCase) {
+
+                        options = charactersU;
+                    }
+                    // 1 option - Special
+                    else if (genSpecialChar) {
+
+                        options = charactersS;
+                    }
+                    // 1 option - Number
+                    else if (genNum) {
+
+                        options = charactersU;
+                    };
+                    // secPass array hold generated password
+                    var password = [];
+                    // //random selection of variables and pushes it in password
+                    for (var i = 0; i < secPassLength; i++) {
+
+                        var getOptions = options[Math.floor(Math.random() * options.length)];
+
+                        password.push(getOptions);
+                    }
+
+                    var result = password.join("");
+                    return result;
+                } else {
+                    console.log("wrong range")
+                    alert("Please enter a number in the correct range");
+                    console.log("The length is not within range");
+                };
+                // end validation within rigth range
+            } else {
+                // no entry for secPassLenght;
+                alert("The length is required")
+                console.log("The length is required")
+                return;
+            };
+
         };
-        // end validation within rigth range
-    } else {
-        // no entry for secPassLenght;
-        alert("The length is required")
-        console.log("The length is required")
-        return;
-    };
 
-};
-//console.log(generatePassword());
-    
-
-
-
-</script>
-
-
-
-
-
-        
-     <!-- Point to Javascript file
-    // <script src="./Assets/Javascript/myscript.js"></script>  -->
+    </script>
 
     <!-- Optional JavaScript for Bootstrap-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
